@@ -1,0 +1,5 @@
+id,fecha,hipotesis,config,commit,semilla,metrica,decision
+E000,2026-10-29,control LB33.89 reproduce,k01 v2 fork exacto,kaggle v2,-,eval-commit 3/172 (4 tareas),S01 enviado 57759538
+E001,2026-10-28,CHIMERA v1 cubre eval,chimera_fill ca+dsl LOO,-,det,eval 0/172 emitidos,rechazada en eval
+E002,2026-10-29,CHIMERA v1 precision,idem training,-,det,"train 44/50 (0.88), 1076 salidas",componente de alta precision
+E003,2026-10-29,CA v2 amplia cobertura,chimera_ca2 7 familias,-,det,"eval 0/172; train CA2 11/11, +9 salidas",se integra; negativo en eval
