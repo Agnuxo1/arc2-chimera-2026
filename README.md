@@ -8,14 +8,14 @@ Contest implementation derived from [ARC2_CHIMERA](https://github.com/Agnuxo1/AR
 |---|---|---|
 | E001, symbolic candidates on public evaluation | 0/172 outputs emitted | No demonstrated coverage on this split |
 | E002, original candidates on training | 50 emitted, 44 correct; precision 0.88 | Positive candidate precision, limited coverage; training evidence |
-| E003, expanded CA families | 59 emitted,53 correct on training; CA v2 11/11,9 additional outputs | Positive training contribution; still0/172 evaluation coverage |
+| E003, expanded CA families | 59 emitted, 53 correct on training; CA v2 11/11, 9 additional outputs | Positive training contribution; still 0/172 evaluation coverage |
 | E004, Kaggle control + CHIMERA commit | 3/172, same as control in its restricted commit mode | Successful integration, no measured gain on public commit tasks |
 
-These counts refer to outputs, not interchangeable task accuracy. The inherited control notebook restricts its ordinary commit evaluation to four tasks. Its 3/172 figure is not a full-budget hidden score. Official submission S01 is recorded as57759538 in the project log; the29October authenticated API readback still shows PENDING with no score. [Official readback](docs/official-readback.json). The 24-task fixed GPU control is still running on servidor-ia (job32495d89b1c5419c). No additional compute is launched by this repository.
+These counts refer to outputs, not interchangeable task accuracy. The inherited control notebook restricts its ordinary commit evaluation to four tasks. Its 3/172 figure is not a full-budget hidden score. Official submission S01 is recorded as 57759538 in the project log; the 29October authenticated API readback still shows PENDING with no score. [Official readback](docs/official-readback.json). The 24-task fixed GPU control is still running on servidor-ia (job 32495d89b1c5419c). No additional compute is launched by this repository.
 
 ## Reproduce
 
-Python3.11+ and NumPy. Obtain the allowed labelled ARC files from the competition, outside the repository:
+Python 3.11+ and NumPy. Obtain the allowed labelled ARC files from the competition, outside the repository:
 
 ```bash
 python -m pip install -r requirements.txt
