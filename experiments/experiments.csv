@@ -3,3 +3,6 @@ E000,2026-10-29,control LB33.89 reproduce,k01 v2 fork exacto,kaggle v2,-,eval-co
 E001,2026-10-28,CHIMERA v1 cubre eval,chimera_fill ca+dsl LOO,-,det,eval 0/172 emitidos,rechazada en eval
 E002,2026-10-29,CHIMERA v1 precision,idem training,-,det,"train 44/50 (0.88), 1076 salidas",componente de alta precision
 E003,2026-10-29,CA v2 amplia cobertura,chimera_ca2 7 familias,-,det,"eval 0/172; train CA2 11/11, +9 salidas",se integra; negativo en eval
+E005,2026-10-29,control por tarea en 1x3090,subset24 job 32495d89b1c5419c,-,20261029,"eval 4.5/24 (0.1875), 6/31 salidas, 1 sin decodificar",referencia local del control
+S01,2026-10-29,control oficial,k01 fork exacto,57759538,-,publico 26.53,referencia de S02
+S02,2026-10-31,control + CHIMERA oficial,k02 attempt_1,57848130,-,publico 29.72,+3.19 sin atribuir; una ejecucion

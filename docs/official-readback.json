@@ -1,11 +1,23 @@
 {
-  "checked_utc": "2026-10-29T07:08:12.250188+00:00",
+  "checked_utc": "2026-11-06T17:46:50.306282+00:00",
   "competition": "arc-prize-2026-arc-agi-2",
+  "team_rank": 1711,
+  "team_count": 3543,
   "submissions": [
     {
+      "ref": "57848130",
+      "label": "S02 control + CHIMERA",
+      "status": "SubmissionStatus.COMPLETE",
+      "public_score": "29.72",
+      "private_score": "",
+      "date": "2026-10-31 19:00:27.453000"
+    },
+    {
       "ref": "57759538",
-      "status": "SubmissionStatus.PENDING",
-      "public_score": "",
+      "label": "S01 control",
+      "status": "SubmissionStatus.COMPLETE",
+      "public_score": "26.53",
+      "private_score": "",
       "date": "2026-10-29 05:08:20.987000"
     }
   ]

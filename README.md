@@ -10,6 +10,8 @@
 
 </div>
 
+**Best official public score: 29.72 on the ARC-AGI-2 leaderboard (submission S02, control + CHIMERA), against 26.53 for the control alone (S01). One run each, so the 3.19-point gap is not yet attributed to CHIMERA.** On training tasks, 44 of CHIMERA's 50 emitted candidates are correct (precision 0.88), and the expanded cellular-automaton rules score 11 of 11.
+
 Contest implementation derived from [ARC2_CHIMERA](https://github.com/Agnuxo1/ARC2_CHIMERA), combining a symbolic DSL, induced cellular-automaton rules and a separately credited Qwen control. [Official competition](https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-2).
 
 **Contents** — [Measured evidence](#measured-evidence) · [Background](#background) · [Reproduce](#reproduce) · [Layout and attribution](#layout-and-attribution) · [Real-world applications](#real-world-applications) · [Possible improvements](#possible-improvements) · [Future work](#future-work) · [Bibliography](#bibliography)
@@ -20,6 +22,9 @@ Contest implementation derived from [ARC2_CHIMERA](https://github.com/Agnuxo1/AR
 
 | Experiment | Outcome | Interpretation |
 |---|---|---|
+| S02, official: control + CHIMERA | Public score **29.72** (57848130) | Best official result; one run |
+| S01, official: control alone | Public score 26.53 (57759538) | Reference for S02; one run |
+| E005, control on 24 fixed public evaluation tasks | 4.5/24 tasks (0.1875); 6/31 outputs correct | Inherited solver on one RTX 3090 in 2.8 h; measures the control, not CHIMERA |
 | E001, symbolic candidates on public evaluation | 0/172 outputs emitted | No demonstrated coverage on this split |
 | E002, original candidates on training | 50 emitted, 44 correct; precision 0.88 | Positive candidate precision, limited coverage; training evidence |
 | E003, expanded CA families | 59 emitted, 53 correct on training; CA v2 11/11, 9 additional outputs | Positive training contribution; still 0/172 evaluation coverage |
@@ -27,7 +32,7 @@ Contest implementation derived from [ARC2_CHIMERA](https://github.com/Agnuxo1/AR
 
 <p align="center"><img src="docs/readme/03-programs.gif" alt="Stacked bars for all 25 programs that produced the 50 emitted training outputs" width="100%"><br><sub>Fig. 2 — Every emitted output of E002, grouped by program. Data: experiments/E002_chimera_train.json.</sub></p>
 
-These counts refer to outputs, not interchangeable task accuracy. The inherited control notebook restricts its ordinary commit evaluation to four tasks. Its 3/172 figure is not a full-budget hidden score. Official submission S01 is recorded as 57759538 in the project log; the 29October authenticated API readback still shows PENDING with no score. [Official readback](docs/official-readback.json). The 24-task fixed GPU control is still running on servidor-ia (job 32495d89b1c5419c). No additional compute is launched by this repository.
+These counts refer to outputs, not interchangeable task accuracy. The inherited control notebook restricts its ordinary commit evaluation to four tasks. Its 3/172 figure is not a full-budget hidden score. Official scores were read from the authenticated Kaggle API on 6 November 2026, when no private score was published: [official readback](docs/official-readback.json). The 24-task fixed GPU control finished on servidor-ia (job 32495d89b1c5419c); one task did not decode and counts as zero, which is why the solver's own log prints 4.5/23. No additional compute is launched by this repository.
 
 ## Background
 
@@ -97,15 +102,20 @@ The evaluator writes coverage, precision, per-output records and exceptions. It 
   them behind a flag allows a matched re-run.
 - **A full-budget control comparison.** The inherited control evaluates four tasks in its commit mode, so 3/172 is
   not a full-budget score; control and control + CHIMERA should be compared on fixed tasks at full budget.
-- **Official evidence.** The S01 readback is still pending; when a score appears it must stay separate from local
-  evidence, as the research protocol requires.
+- **Attributing the official gap.** S02 scored 3.19 points above S01, but each ran once. Two facts argue against
+  reading that gap as CHIMERA's effect: it emitted 0/172 outputs on public evaluation, and S01, an exact fork of a
+  notebook labelled 33.89, scored 26.53, a spread larger than the gap. Repeating both pipelines on fixed tasks would
+  separate CHIMERA's share from test-time-training variation. Official scores stay apart from local evidence, as
+  the research protocol requires.
+- **Leaderboard position.** Kaggle listed the team at 1711 of 3543 on 6 November, before any private score. The
+  coverage work above is the step aimed at it.
 
 ## Future work
 
-<p align="center"><img src="docs/readme/10-roadmap.gif" alt="Roadmap with three completed experiments, one running job and two planned steps" width="100%"><br><sub>Fig. 9 — Done items are in experiments/LOG.md; the running GPU control is stated in this README.</sub></p>
+<p align="center"><img src="docs/readme/10-roadmap.gif" alt="Roadmap with four completed milestones and two planned steps" width="100%"><br><sub>Fig. 9 — Done items are in experiments/LOG.md and docs/official-readback.json.</sub></p>
 
-1. Finish the 24-task fixed GPU control that is running on servidor-ia.
-2. Record the official S01 score when the readback leaves PENDING.
+1. Repeat S01 and S02 on fixed tasks to measure run-to-run spread and CHIMERA's share of the official gap.
+2. Record the private score when Kaggle publishes it, kept apart from local evidence.
 3. Add CA v2 to the evaluator behind a flag and repeat the matched labelled evaluation.
 4. Search new rule families on training only, then run one frozen evaluation pass.
 5. Compare control and control + CHIMERA at full budget on fixed tasks.
