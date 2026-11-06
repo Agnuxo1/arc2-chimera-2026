@@ -1,5 +1,5 @@
 {
-  "source_snapshot_utc": "2026-10-29T08:39:25.340653+00:00",
+  "source_snapshot_utc": "2026-11-06T17:47:45.391904+00:00",
   "files": [
     {
       "path": ".github/workflows/release.yml",
@@ -13,8 +13,8 @@
     },
     {
       "path": "docs/official-readback.json",
-      "bytes": 274,
-      "sha256": "33a766a6142444fa2c51a42490c320a4a931cb85a60b4f486d48bc26c4090ca7"
+      "bytes": 605,
+      "sha256": "3be0f42bbf028a1dd991758d9f825d5cd8a16f61f419c364e0f04f71ad110f6d"
     },
     {
       "path": "docs/PROJECT_STATUS.json",
@@ -28,8 +28,8 @@
     },
     {
       "path": "docs/readme/02-evidence.gif",
-      "bytes": 427303,
-      "sha256": "b0cdb6a9564a777c946ed959bb11de7452dcdfad44e620529e3a56c5555e08f9"
+      "bytes": 428381,
+      "sha256": "19a3b3c1cbe904745f79e3787b2ab4650efd6ef0dbbf78bfd5c5ab846c3bd21a"
     },
     {
       "path": "docs/readme/03-programs.gif",
@@ -63,13 +63,13 @@
     },
     {
       "path": "docs/readme/09-improvements.gif",
-      "bytes": 386225,
-      "sha256": "2334cb15676cc3c3ec4abf79289ed261d689eae389a7499774df538e9fbc6497"
+      "bytes": 390829,
+      "sha256": "d0e1d557ee0942803fafa919aa390a501eaca74dab4341c8909603120831ca8b"
     },
     {
       "path": "docs/readme/10-roadmap.gif",
-      "bytes": 321259,
-      "sha256": "49aa58389c4ede79c090d6721251a5ac7e7f26e8e6a07344803add10b8b7a7b3"
+      "bytes": 217655,
+      "sha256": "2bef1feae39b4082f0d00ac2a3e8ae2f22391c47019955d3bc198ae23be6f99e"
     },
     {
       "path": "docs/RESEARCH_PROTOCOL.md",
@@ -88,13 +88,13 @@
     },
     {
       "path": "experiments/experiments.csv",
-      "bytes": 547,
-      "sha256": "4d119594fa57a8739cfc10c83f22b0778060fb3ee8bfee40e38e0eaaacce3e58"
+      "bytes": 921,
+      "sha256": "ec6b69b456fc8201750092f85a943b6d2d8cd47ba21cd171381672e334f90164"
     },
     {
       "path": "experiments/LOG.md",
-      "bytes": 3584,
-      "sha256": "f25667c299ff0f13667ff8cf842f1345b4741c1b8e02d80ca43f947ff5ea02d7"
+      "bytes": 4406,
+      "sha256": "f7797c68738908e9daa5ee912fed326f7de9707bac1ba38f98fc8cbd87922c12"
     },
     {
       "path": "LICENSE",
@@ -108,8 +108,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 13370,
-      "sha256": "f8e750642736bb1708072a17ce62dd9684d7416088efa0edb9c1332565e94247"
+      "bytes": 14676,
+      "sha256": "4970833850242d2ed40d1686e0584c44d067084d530eae6bb14888e62aecdd61"
     },
     {
       "path": "requirements.txt",

@@ -44,3 +44,14 @@ Tabla CSV paralela: `experiments.csv`.
   Pila nueva (unsloth 2026.10, transformers 5.17) descartada: pérdida 0,0 y 0 candidatos (trabajo ffb53a45).
 - Prueba 1 tarea (0934a4d8, trabajo 5cf43dfe): 0/1, 397 s, VRAM pico 14,5 GiB.
 - Subconjunto fijo 24 tareas de evaluación (random.seed(20261029), server/subset24.txt), presupuesto 12 600 s: trabajo 32495d89b1c5419c.
+
+## E005 (cierre) — control por tarea en server-ia, recogido el 06-11
+- Trabajo 32495d89b1c5419c, exit 0, 2,8 h. score.json: 4,5/24 tareas, media 0,1875; 6/31 salidas correctas.
+- b10624e5 no se decodificó y cuenta como cero; por eso el registro del solver imprime 4.5/23.
+- Mide el control heredado, no CHIMERA.
+
+## S01 y S02 — lectura oficial, 06-11
+- S01 57759538 (control): público 26,53. S02 57848130 (control + CHIMERA en attempt_1): público 29,72. Sin puntuación privada.
+- Diferencia +3,19, una ejecución de cada uno; sin atribuir. CHIMERA emitió 0/172 en evaluación pública (E001, E003, E004)
+  y el fork exacto S01 sacó 26,53 frente al 33,89 del notebook, una dispersión mayor que la diferencia.
+- Decisión: dar la cifra oficial y dejar abierta la atribución hasta repetir ambos en tareas fijas.
