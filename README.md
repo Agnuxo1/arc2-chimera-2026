@@ -14,6 +14,10 @@ Contest implementation derived from [ARC2_CHIMERA](https://github.com/Agnuxo1/AR
 
 **Contents** — [Measured evidence](#measured-evidence) · [Background](#background) · [Reproduce](#reproduce) · [Layout and attribution](#layout-and-attribution) · [Real-world applications](#real-world-applications) · [Possible improvements](#possible-improvements) · [Future work](#future-work) · [Bibliography](#bibliography)
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> CPU-based symbolic search and local-rule induction offer inspectable candidate transformations alongside the separately credited neural control. A verification gate emits candidates only when they reproduce demonstrations and pass a leave-one-out check, avoiding unsupported answers from this component. The <a href="#measured-evidence">recorded evidence</a> shows useful training precision but no public-evaluation coverage, so reduced neural workload or broader reasoning gains remain goals for future validation.</sub>
+<!-- impact-note:end -->
+
 ## Measured evidence
 
 <p align="center"><img src="docs/readme/02-evidence.gif" alt="Bars: verified candidates emitted and correct on training, and outputs solved on public evaluation" width="100%"><br><sub>Fig. 1 — Training and public evaluation are separate evidence. Data: the table below and experiments/.</sub></p>
